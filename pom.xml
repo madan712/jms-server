@@ -9,11 +9,11 @@
 		<version>2.2.4.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>com.javaxp</groupId>
 	<artifactId>test-jms-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>test-jms-server</name>
-	<description>Demo project for Spring Boot</description>
+	<description>ActiveMQ server</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -25,14 +25,5 @@
 			<artifactId>spring-boot-starter-activemq</artifactId>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

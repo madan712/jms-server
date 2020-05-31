@@ -1,4 +1,4 @@
-package com.example.testjmsserver;
+package com.javaxp.testjmsserver;
 
 import java.time.LocalDateTime;
 import java.util.Timer;
