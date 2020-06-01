@@ -1,8 +1,6 @@
 package com.javaxp.testjmsserver;
 
 import java.time.LocalDateTime;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javax.jms.Queue;
 
@@ -36,18 +34,12 @@ public class TestJmsServerApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Timer t = new Timer();
-		t.schedule(new TimerTask() {
-			@Override
-			public void run() {
-				LocalDateTime time = LocalDateTime.now();
-				System.out.println("Sending message from server at " + time);
-				TestJmsServerApplication.this.jmsMessagingTemplate.convertAndSend(TestJmsServerApplication.this.queue,
-						"Hello JMS at " + time);
-
-			}
-		}, 0, 2000);
-
+		while(true) {
+			Thread.sleep(2000);
+			LocalDateTime time = LocalDateTime.now();
+			System.out.println("Sending message from server at " + time);
+			this.jmsMessagingTemplate.convertAndSend(this.queue,
+					"Hello JMS at " + time);
+		}
 	}
-
 }
