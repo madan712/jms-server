@@ -15,7 +15,7 @@ import org.springframework.jms.core.JmsMessagingTemplate;
 
 @SpringBootApplication
 @EnableJms
-public class TestJmsServerApplication implements CommandLineRunner {
+public class JmsServerApplication implements CommandLineRunner {
 
 	@Autowired
 	private JmsMessagingTemplate jmsMessagingTemplate;
@@ -24,7 +24,7 @@ public class TestJmsServerApplication implements CommandLineRunner {
 	private Queue queue;
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestJmsServerApplication.class, args);
+		SpringApplication.run(JmsServerApplication.class, args);
 	}
 
 	@Bean
